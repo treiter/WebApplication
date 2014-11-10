@@ -32,6 +32,10 @@ legend {
 #top {
 	background-color: #44a970;
 	height: 70px;
+	width: 720px;
+	line-height: 70px;
+	text-align: left;
+	margin-bottom: 10px;
 }
 
 #menu {

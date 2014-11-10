@@ -14,7 +14,7 @@
 
 </head>
 <body>
-	<h1 id="top">Joint Effect of Multiple Genetic Variations</h1>
+	<div id="top"><h1>&nbsp;Joint Effect of Multiple Genetic Variations</h1></div>
 	<div id="menu">
 		<h1>
 			<a href="http://bioinformatics.cs.vt.edu/~treiter/index.php">Home</a>
