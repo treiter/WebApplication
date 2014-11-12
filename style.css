@@ -29,6 +29,11 @@ legend {
 	font-size: 20px;
 }
 
+#results {
+	height: 700px;
+	overflow:auto;
+}
+
 #top {
 	background-color: #44a970;
 	height: 70px;

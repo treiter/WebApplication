@@ -11,7 +11,7 @@ if(isset($_GET['set_id']) && strlen($_GET['set_id']) > 0) {
 	$result = @mysql_query($query);
 	if($result) {
 		echo '<table border="2" align="center" cellspacing="5" cellpadding=5">';
-		echo "<tr><td colspan=8 align = center>Info for set_id=$set_id with score: $set_score</td</tr>";
+		echo "<tr><td colspan=8 align = center>Info for Set Id=$set_id with HMMvar Score: $set_score</td</tr>";
 		echo "<tr>
 		<td align=\"left\">Variant names</td>
 		<td align=\"left\">Transcript id</td>
@@ -35,10 +35,10 @@ if(isset($_GET['set_id']) && strlen($_GET['set_id']) > 0) {
 		}
 		echo '</table>';
 	} else {
-		echo "<p><b>No results for set_id = $set_id</b></p>";
+		echo "<p><b>No results for Set Id = $set_id</b></p>";
 	}
 } else {
-	echo '<font color="red"><p>Error: no set_id.</p></font>';
+	echo '<font color="red"><p>Error: no Set Id.</p></font>';
 }
 include('./footer1.inc');
 ?>

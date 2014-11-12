@@ -67,7 +67,7 @@ if(isset($message)) {
 		echo "<script type='text/javascript'>alert('$error_message');</script>";
 	}
 	elseif($result) { // If it ran OK, display the records.
-		echo '<table border="2" align="center" cellspacing="3" cellpadding="5">
+		echo '<div id="results"><table border="2" align="center" cellspacing="3" cellpadding="5">
 		<tr><td align="left"><b>Gene Name</b></td>
 			<td align="left"><b>Individual Id</b></td>
 			<td align="left"><b>Reference Transcript Sequence</b></td>
@@ -80,7 +80,7 @@ if(isset($message)) {
 			<td align=\"left\"><a href=\"http://bioinformatics.cs.vt.edu/~treiter/variant_set_display.php?set_id=$row[3]&set_score=$row[4]\">$row[3]</a></td>
 			<td align=\"left\">$row[4]</td></td>\n";
 		}
-		echo '</table>';
+		echo '</table></div>';
 	}
 } elseif($individual_id) {
 	require_once('../mysql_connect.php');
@@ -93,7 +93,7 @@ if(isset($message)) {
 		echo "<script type='text/javascript'>alert('$error_message');</script>";
 	}
 	elseif($result) { // If it ran OK, display the records.
-		echo '<table border="2" align="center" cellspacing="3" cellpadding="5">
+		echo '<div id="results"><table border="2" align="center" cellspacing="3" cellpadding="5">
 		<tr><td align="left"><b>Gene Name</b></td>
 			<td align="left"><b>Individual Id</b></td>
 			<td align="left"><b>Reference Transcript Sequence</b></td>
@@ -106,7 +106,7 @@ if(isset($message)) {
 			<td align=\"left\"><a href=\"http://bioinformatics.cs.vt.edu/~treiter/variant_set_display.php?set_id=$row[3]&set_score=$row[4]\">$row[3]</a></td>
 			<td align=\"left\">$row[4]</td></td>\n";
 		}
-		echo '</table>';
+		echo '</table></div>';
 	}
 	else {
 		echo '<p>Error in individual id search.</p>';
@@ -119,7 +119,7 @@ if(isset($message)) {
 		echo "<script type='text/javascript'>alert('$error_message');</script>";
 	}
 	elseif($result) { // If it ran OK, display the records.
-		echo '<table border="2" align="center" cellspacing="3" cellpadding="5">
+		echo '<div id="results"><table border="2" align="center" cellspacing="3" cellpadding="5">
 		<tr><td align="left"><b>Gene Name</b></td>
 			<td align="left"><b>Individual Id</b></td>
 			<td align="left"><b>Reference Transcript Sequence</b></td>
@@ -132,7 +132,7 @@ if(isset($message)) {
 			<td align=\"left\"><a href=\"variant_set_display.php?set_id=$row[3]&set_score=$row[4]\">$row[3]</a></td>
 			<td align=\"left\">$row[4]</td></td>\n";
 		}
-		echo '</table>';
+		echo '</table></div>';
 	} else {
 		echo "<p>Error in gene name search.</p>";
 	}
