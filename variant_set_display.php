@@ -1,6 +1,6 @@
 <?php
 include('header1.inc');
-
+include('./query.php');
 if(isset($_GET['set_id']) && strlen($_GET['set_id']) > 0) {
 	$set_id = $_GET['set_id'];
 	$set_score = $_GET['set_score'];
@@ -11,16 +11,16 @@ if(isset($_GET['set_id']) && strlen($_GET['set_id']) > 0) {
 	$result = @mysql_query($query);
 	if($result) {
 		echo '<table border="2" align="center" cellspacing="5" cellpadding=5">';
-		echo "<tr><td colspan=8 align = center>Info for Set Id=$set_id with HMMvar Score: $set_score</td</tr>";
+		echo "<tr><td colspan=8 align = center><b>Info for Set Id=$set_id with HMMvar Score: $set_score</b></td</tr>";
 		echo "<tr>
-		<td align=\"left\">Variant names</td>
-		<td align=\"left\">Transcript id</td>
-		<td align=\"left\">Position</td>
-		<td align=\"left\">mRNAref</td>
-		<td align=\"left\">mRNAalt</td>
-		<td align=\"left\">aaCode</td>
-		<td align=\"left\">cosmic_mid</td>
-		<td align=\"left\">Score</td>
+		<td align=\"left\"><b>Variant names</b></td>
+		<td align=\"left\"><b>Reference Transcript Sequence</b></td>
+		<td align=\"left\"><b>Position</b></td>
+		<td align=\"left\"><b>mRNAref</b></td>
+		<td align=\"left\"><b>mRNAalt</b></td>
+		<td align=\"left\"><b>aaCode</b></td>
+		<td align=\"left\"><b>cosmic_mid</b></td>
+		<td align=\"left\"><b>Score</b></td>
 		</tr>";
 		while($row = mysql_fetch_array($result, MYSQL_NUM)) {
 			echo "<tr><td align=\"left\"><a href=\"http://bioinformatics.cs.vt.edu/~treiter/variation_display.php?name=$row[0]\">$row[0]</a></td>\n";

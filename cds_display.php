@@ -1,6 +1,6 @@
 <?php
 include('./header1.inc');
-
+include('./query.php');
 if(isset($_GET['trans_id']) && strlen($_GET['trans_id']) > 0) {
 	$trans_id = $_GET['trans_id'];
 	unset($_GET['trans_id']);

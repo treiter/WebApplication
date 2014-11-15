@@ -1,6 +1,6 @@
 <?php
 include('./header1.inc');
-
+include('./query.php');
 if(isset($_GET['name']) && strlen($_GET['name']) > 0) {
 	$var_name = $_GET['name'];
 	unset($_GET['name']);
@@ -9,18 +9,18 @@ if(isset($_GET['name']) && strlen($_GET['name']) > 0) {
 	$result = @mysql_query($query);
 	if($result) {
 		echo '<table border="2" align="center" cellspacing="5" cellpadding=5">';
-		echo "<tr><td colspan=10 align = center>Information for variant name = $var_name</td</tr>";
+		echo "<tr><td colspan=10 align = center><b>Information for variant name = $var_name</b></td></tr>";
 		echo "<tr>
-		<td align=\"left\">Variation id</td>
-		<td align=\"left\">chrom</td>
-		<td align=\"left\">Position</td>
-		<td align=\"left\">ref</td>
-		<td align=\"left\">alt</td>
-		<td align=\"left\">qual</td>
-		<td align=\"left\">filter</td>
-		<td align=\"left\">VT</td>
-		<td align=\"left\">AA</td>
-		<td align=\"left\">AF</td>
+		<td align=\"left\"><b>Variation id</b></td>
+		<td align=\"left\"><b>chrom</b></td>
+		<td align=\"left\"><b>Position</b></td>
+		<td align=\"left\"><b>ref</b></td>
+		<td align=\"left\"><b>alt</b></td>
+		<td align=\"left\"><b>qual</b></td>
+		<td align=\"left\"><b>filter</b></td>
+		<td align=\"left\"><b>VT</b></td>
+		<td align=\"left\"><b>AA</b></td>
+		<td align=\"left\"><b>AF</b></td>
 		</tr>";
 		while($row = mysql_fetch_array($result, MYSQL_NUM)) {
 			echo "<tr><td align=\"left\">$row[0]</td>\n";
