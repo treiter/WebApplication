@@ -14,6 +14,7 @@
 
 </head>
 <body>
+	<div id="total_container">
 	<div id="top"><h1>&nbsp;Joint Effect of Multiple Genetic Variations</h1></div>
 	<div id="menu">
 		<h1>
